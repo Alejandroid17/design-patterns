@@ -1,7 +1,9 @@
 # Factory method
 
 from __future__ import annotations
+
 from abc import ABC, abstractmethod
+
 
 class DocumentFormat(ABC):
     """The DocumentFormat class declares the factory method that is supposed to return an object of a Document class."""
@@ -74,3 +76,25 @@ if __name__ == "__main__":
     print("--- WORD ---")
     result = WordFormat().get_pages()
     print(result)
+
+    """
+    Result:
+
+        --- PDF ---
+        Start business logic
+        Do something
+        PDF document: 5
+
+
+        --- Excel ---
+        Start business logic
+        Do something
+        Excel document: 7
+
+
+        --- WORD ---
+        Start business logic
+        Do something
+        Word document: 2
+        
+    """
